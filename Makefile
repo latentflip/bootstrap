@@ -9,7 +9,7 @@ build:
 	@@if test ! -z ${LESS_COMPESSOR}; then \
 		sed 's/@DATE/'"${DATE}"'/' ${BOOTSTRAP_LESS} >${BOOTSTRAP_LESS}.tmp; \
 		lessc ${BOOTSTRAP_LESS}.tmp > ${BOOTSTRAP}; \
-		lessc ${BOOTSTRAP_LESS}.tmp > ${BOOTSTRAP_MIN} --compress; \
+		lessc ${BOOTSTRAP_LESS}.tmp > ${BOOTSTRAP_MIN}; \
 		rm -f ${BOOTSTRAP_LESS}.tmp; \
 		echo "Bootstrap successfully built! - `date`"; \
 	else \
