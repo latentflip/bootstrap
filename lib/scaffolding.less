@@ -109,12 +109,13 @@ a {
   #gradient > .vertical-three-colors(#fff, #fff, 0.25, darken(#fff, 10%));
   padding: 4px 14px;
   text-shadow: 0 1px 1px rgba(255,255,255,.75);
-  color: #333;
+  color: @lightgray;
   font-size: 13px;
+  font-weight: bold;
   line-height: @baseline;
-  border: 1px solid #ccc;
+  border: 2px solid #CFCFD0;
   border-bottom-color: #bbb;
-  .border-radius(4px);
+  .border-radius(6px);
   @shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   .box-shadow(@shadow);
   &:hover {
@@ -131,7 +132,8 @@ a {
     }
   }
   &.primary {
-    .btnColor(@blue, @blueDark)
+    .btnColor(@btntopblue, @btnbottomblue);
+    border: 2px solid @btnborderblue;
   }
   &.danger {
     .btnColor(lighten(@red, 15%), @red)
@@ -139,7 +141,7 @@ a {
   &.large {
     font-size: 16px;
     line-height: 28px;
-    .border-radius(6px);
+    .border-radius(8px);
   }
   &.small {
     padding-right: 9px;
