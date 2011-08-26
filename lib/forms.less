@@ -2,7 +2,6 @@
  * Base styles for various input types, form layouts, and states
  * ------------------------------------------------------------- */
 
-
 // FORM STYLES
 // -----------
 
@@ -70,13 +69,17 @@ form {
     line-height: @baseline;
     height: @baseline;
     color: @gray;
-    border: 1px solid #ccc;
-    .border-radius(3px);
+    background-color: @bluewhite;
+    border: 1px solid @inputborder;
+    .border-radius(5px);
   }
   select,
   input[type=file] {
     height: @baseline * 1.5;
     line-height: @baseline * 1.5;
+  }
+  select {
+    border: 1px solid #ccc;
   }
   textarea {
     height: auto;
